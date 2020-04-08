@@ -1,3 +1,19 @@
 .h1{
     margin: 0 auto;
+    font-size: 32px;
+}
+.navbar{
+    margin-bottom: 50px;
+}
+body{
+    background-color: aquamarine;
+}
+.singleDay{
+    border: 1px solid gray;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.fiveDay{
+    display: inline-flex;
+    margin: 10px;
 }

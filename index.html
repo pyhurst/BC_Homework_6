@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/23d4a9b88e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./style.css">
     <title>Weather Dashboard</title>
 </head>
@@ -13,17 +14,32 @@
     </nav>
 
     <div class="container">
-        <form class="form">
-            <div class="form-group mx-sm-3">
-              <label for="cityInput" class="form-group">Search for a City</label>
-              <input type='text' class="form-control" id="cityInput">
+        <div class="row">
+            <div class="col-4">
+                <form class="form">
+                    <div class="form-group">
+                        <label for="cityInput" class="form-group">Search for a City:</label>
+                        <input type='text' class="form-control" id="cityInput">
+                    </div>
+                        <button type="submit" class="btn btn-primary mb-2" id='searchBtn'>Search</button>
+                </form>
+                <ul class="list-group">
+                </ul>
             </div>
-            <button type="submit" class="btn btn-primary mb-2">Search</button>
-          </form>
-
-          <div id='todayDisplay'></div>
-          <div id='fiveDayDisplay'></div>
+            <div class="col-8">
+                <div class="singleDay clears">
+                    <h4 id='today'>Today: </h4>
+                </div>
+                <div id='fiveDayHead' class='clears'></div>
+                <div class="fiveDay clears"></div>
+            </div>
+        </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
     <script src="./script.js"></script>
 </body>
 </html>
