@@ -20,7 +20,7 @@ function displayToday() {
 
         $('#today').append(date);
         display.append($('<h5>').text(res.name));
-        display.append($('<p>').text('Temperautre: ' + temp + ' \xB0F'));
+        display.append($('<p>').text('Temperature: ' + temp + ' \xB0F'));
         display.append($('<p>').text('Humidity: ' + res.main.humidity + '%'));
         display.append($('<p>').text('Wind Speed: ' + res.wind.speed + ' MPH'));
 });
