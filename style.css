@@ -17,3 +17,6 @@ body{
     display: inline-flex;
     margin: 10px;
 }
+#prevCities{
+    margin: 20px 0;
+}

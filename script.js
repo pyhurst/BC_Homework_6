@@ -95,7 +95,9 @@ function init() {
 // Pushes the newly searched city into a city array and local storage
 function saveCities() {
     event.preventDefault();
-    cities.push(cityInput.value.trim());
+    if(cities.includes(cityInput.value.trim()) === false) {
+        cities.push(cityInput.value.trim());
+    }
     $('.list-group').empty();
     searchedList();
     localStorage.setItem('cities', JSON.stringify(cities));
@@ -105,10 +107,8 @@ function saveCities() {
 function clickList() {
     event.preventDefault();
     $('#cityInput').val($(this)[0].innerText);
-    cities.push($(this)[0].innerText);
     $('.list-group').empty();
     searchedList();
-    localStorage.setItem('cities', JSON.stringify(cities));
     displayToday();
     displayFiveDay();
 }
